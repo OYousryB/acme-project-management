@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "80c4db00-bb00-421d-ac0f-e395e6c61d07",
+		"name": "ACME",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "Create Employee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "token",
+								"value": "7Ep2qkOQqh4z2bcsfnOsvQ1634236705661",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employee\": {\n        \"first_name\": \"yousry\",\n        \"last_name\": \"omar\",\n        \"email\": \"omaryousry11@gmail.com\",\n        \"role\": \"manager\",\n        \"department\": \"engineering\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/employees",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Employee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "token",
+								"value": "ZTQo2O1dxMyIF_xOpUpDGA1634264746040",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/employees",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Employee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "token",
+								"value": "7Ep2qkOQqh4z2bcsfnOsvQ1634236705661",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employee\":\n    {\n      \"name\":\"Test\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/employees/6",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employees",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Employee",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "token",
+								"value": "7Ep2qkOQqh4z2bcsfnOsvQ1634236705661",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employee\":\n    {\n      \"role\": \"manager\",\n      \"department\": \"engineering\"\n    }\n}   "
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/employees/6",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employees",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "List Projects",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "token",
+								"value": "iLhRz2QYRk4UQO16i91_sA1634259118122",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/projects",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "token",
+								"value": "ZTQo2O1dxMyIF_xOpUpDGA1634264746040",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"project\": {\n        \"name\": \"test project\",\n        \"owner_id\": 3\n    }\n}"
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/projects",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Projects",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "token",
+								"value": "iLhRz2QYRk4UQO16i91_sA1634259118122",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"project\": {\n        \"state\": \"active\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/projects/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign Participents",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "token",
+								"value": "iLhRz2QYRk4UQO16i91_sA1634259118122",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"project\": {\n        \"employee_id\": 2\n    }\n}"
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/projects/1/assign_participant",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"1",
+								"assign_participant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Participents",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "token",
+								"value": "iLhRz2QYRk4UQO16i91_sA1634259118122",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"project\": {\n        \"employee_id\": 3\n    }\n}"
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/projects/1/remove_participant",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"1",
+								"remove_participant"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create Auth Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/authenticate",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
