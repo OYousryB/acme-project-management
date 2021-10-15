@@ -12,8 +12,8 @@ class Employee < ApplicationRecord
   validates :first_name, :last_name, :email, :department, :role, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :email, uniqueness: true
-  validates :department, inclusion: { in: departments.keys, message: 'Department is an invalid' }
-  validates :role, inclusion: { in: roles.keys, message: 'Role is an invalid' }
+  validates :department, inclusion: { in: departments.keys, message: 'Department is invalid' }
+  validates :role, inclusion: { in: roles.keys, message: 'Role is invalid' }
 
   def role=(value)
     self[:role] = value

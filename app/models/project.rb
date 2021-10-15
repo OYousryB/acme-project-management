@@ -11,7 +11,7 @@ class Project < ApplicationRecord
   validates :name, :owner, presence: true
   validate :owner_is_manager?
 
-  validates :state, inclusion: { in: states.keys, message: 'State is an invalid' }
+  validates :state, inclusion: { in: states.keys, message: 'State is invalid' }
 
   def state=(value)
     self[:state] = value

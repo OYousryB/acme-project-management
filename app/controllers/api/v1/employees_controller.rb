@@ -17,7 +17,7 @@ class Api::V1::EmployeesController < ApplicationController
     if updated_employee
       render json: @employee, status: :ok, serializer: EmployeeSerializer
     else
-      render json: { errors: updated_employee.errors }, status: :unprocessable_entity
+      render json: { errors: @employee.errors }, status: :unprocessable_entity
     end
   end
 
