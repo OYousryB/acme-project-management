@@ -62,6 +62,6 @@ then you can test out any API after adding the token in the headers
   - Participants must be part of the same department as the owner
   - Assignable participants or owner are employees, which are managed via an existing dedicated API (See https://employees-api.vercel.app/ for the API documentation)
 
-## Suggested ERD
+## Suggested Database ERD
 
 ![Illustration](erd.jpg)
